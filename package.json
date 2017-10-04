@@ -10,5 +10,8 @@
     "html2json": "^1.0.2",
     "unirest": "^0.5.1",
     "xmlhttprequest": "^1.8.0"
+  },
+  "engines": {
+    "node": "8.4.0"
   }
 }
