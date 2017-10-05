@@ -50,7 +50,13 @@ client.on("message", msg => {
             break;
             default : 
                 //Partie user
-                var xp = level[msg.guild.id][msg.author.id].xp;
+                var serv = level[msg.guild.id];
+                var verif = serv[msg.author.id];
+                if(verif == undefined){
+                    var xp = '0';
+                } else {
+                    var xp = verif.xp;
+                }
                 var xp_summ = require('./level.js');
                 xp_summ.xp(msg, xp)
                     .then( result =>{
